@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+{% block content%}
+<div class="container">
+    <div class="row">
+
+        {% for u in data %}
+        <div class="col-md-12">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        {{u.title}}
+                    </h3>
+                    <p>
+                        {{u.content}}
+                        {{u.created}}
+                        {{u.modified}}
+
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
